@@ -1,0 +1,148 @@
+body{
+	background-color: #F8F8F8;
+}
+.hero-body{
+	display: inline-block;
+}
+.pull-down-menu {
+  background-color: white;
+  margin-top: 50px;
+  padding: 50px;
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: -100%;
+  border-top: 10px solid transparent;
+  z-index: 10;
+  
+  transition: left .4s ease-in-out;
+}
+.pull-down-menu.is-open {
+  top: 0;
+  left: 0;
+}
+.pull-down-menu li{
+  list-style-type: none;
+  line-height: 2em;
+  font-family: "open sans", sans-serif;
+  color: black;	
+}
+.nav-header {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  height: 50px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  /** CHROME BUG: if this isn't a render layer, we
+  can't touch it after we've touched it once :-S **/
+  -webkit-transform: translateZ(0);
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, .1);
+}
+
+.hamburger-menu {
+	width: 35px;
+	height: 25px;
+	margin-left: 20px;
+	margin-top: 10px;
+	position: absolute;
+}
+
+.hamburger-menu-handle {
+	top: 10px;
+    cursor: pointer;
+	border-radius: 1px;
+	height: 5px;
+	width: 35px;
+	background: black;
+	position: absolute;
+	display: block;
+	content: '';
+}
+
+.hamburger-menu-handle:before, .hamburger-menu-handle:after {
+	cursor: pointer;
+	border-radius: 1px;
+	height: 5px;
+	width: 35px;
+	background: black;
+	position: absolute;
+	display: block;
+	content: '';
+}
+
+.hamburger-menu-handle:before {
+	top:-10px;
+}
+
+.hamburger-menu-handle:after {
+	bottom:-10px;
+}
+
+.hamburger-menu-handle, .hamburger-menu-handle:before, .hamburger-menu-handle:after {
+	transition: all 400ms ease-in-out;
+}
+
+.hamburger-menu-handle.active {
+	background-color: transparent;
+}
+
+.hamburger-menu-handle.active:before, .hamburger-menu-handle.active:after {
+	top:0;
+}
+
+.hamburger-menu-handle.active:before {
+	transform: rotate(45deg);
+}
+
+.hamburger-menu-handle.active:after {
+	transform: rotate(-45deg);
+}
+
+.projects li:nth-child(1), .projects li:nth-child(2), .projects li:nth-child(3){
+	width: calc(99.99% * 0.999/3 - (1px - 1px * 0.999/3));
+	height: 50vh;
+	display: block;
+	float: left;
+	margin-right: 1px;
+}
+
+.projects li:nth-child(4){
+	width: 40%;
+	height: 50vh;
+	display: block;
+	float: left;
+	margin-top: 1px;
+}
+
+.projects li:nth-child(5){
+	width: calc(60% - 1px);
+	height: 50vh;
+	display: block;
+	float: left;
+	margin-left: 1px;
+	margin-top: 1px;	
+}
+
+.projects li picture{
+	height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+.projects li picture img{
+	display: block;
+    transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+    min-height: 100%;
+    min-width: 100%;
+}
+ul.projects{
+	overflow: hidden;
+    padding: 0;
+    margin: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 10;
+}
