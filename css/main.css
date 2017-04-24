@@ -1,36 +1,48 @@
 body{
 	background-color: #F8F8F8;
+	margin: 0;
 }
 .hero-body{
 	display: inline-block;
 }
-.header{
-	height: 50px;
-}
 .nav-header {
+	opacity: 1;
   position: fixed;
-  z-index: 5;
+  z-index: 30;
   top: 0;
   height: 50px;
   left: 0;
   right: 0;
-  background-color: white;
-  /** CHROME BUG: if this isn't a render layer, we
-  can't touch it after we've touched it once :-S **/
-  -webkit-transform: translateZ(0);
-  box-shadow: 0 0 3px 2px rgba(0, 0, 0, .1);
+}
+.nav-header-shrink {
+	background-color: #F8F8F8;
+	box-shadow: 0 0 3px 2px rgba(0, 0, 0, .1);
+}
+.nav-header-shrink a{
+	right: 10px;
+	top: 5px;
+}
+.nav-header-shrink a img{
+	width: 40px;
+}
+.nav-header-shrink div{
+	left: 10px;
+	top: 10px;
 }
 .logo {
-	display:inline-block;
-	float:right;
-	height: 50px;
-	margin-right: 16px
+	z-index: 5;
+	position: absolute;
+	right: 30px;
+	top: 30px;
+}
+.logo img{
+	width:60px;
 }
 .pull-down-menu {
-  background-color: white;
-  margin-top: 50px;
+  background-color: #F8F8F8;
   padding: 50px;
-  width: 300px;
+  margin: 0;
+  width: 100px;
   height: 100%;
   position: absolute;
   top: 0px;
@@ -43,6 +55,7 @@ body{
 .pull-down-menu.is-open {
   top: 0;
   left: 0;
+  position: fixed;
 }
 .pull-down-menu li{
   list-style-type: none;
@@ -52,11 +65,12 @@ body{
 }
 
 .hamburger-menu {
+	z-index: 5;
+	position: absolute;
 	width: 35px;
 	height: 25px;
-	margin-left: 20px;
-	margin-top: 10px;
-	position: absolute;
+	left: 30px;
+	top: 30px;
 }
 
 .hamburger-menu-handle {
@@ -117,32 +131,100 @@ body{
 .scene{
 	height: 100%;
 	display:block;
-}
-.scene picture{
-    position: absolute;
+	margin-top: 0;
 }
 .scene picture img{
 	width: 100%;
 }
+.title{
+	position: absolute;
+	bottom: 40%;
+	left:50%;
+	margin-left: -10%;
+	width: 20%;
+    transition: bottom 2s ease-out;
+    -moz-transition: bottom 2s ease-out;
+    -webkit-transition: bottom 2s ease-out;
+}
+.item-0{
+	position: absolute;
+	top:22%;
+	left:50%;
+	margin-left:-7.5%;
+	width:15%;
+    transition: top 2s ease-out;
+    -moz-transition: top 2s ease-out;
+    -webkit-transition: top 2s ease-out;
+}
 .item-1{
-	bottom: 30%;
-    left: 50%;
-    width: 30%;
+	position: absolute;
+	bottom: 75%;
+    left: 12%;
+    width: 4%;
+    transform: translate(0px, 0px);
+    transition: bottom 2s ease-out;
+    -moz-transition: bottom 2s ease-out;
+    -webkit-transition: bottom 2s ease-out;
 }
 .item-2{
-	bottom: 80%;
-    left: 50%;
+	position: absolute;
+	bottom: 60%;
+    left: 25%;
     width: 3%;
+    transform: translate(0px, 0px);
+    transition: bottom 2s ease-out;
+    -moz-transition: bottom 2s ease-out;
+    -webkit-transition: bottom 2s ease-out;
 }
 .item-3{
+	position: absolute;
 	bottom: 50%;
-    left: 10%;
-    width: 10%;
+    left: 12%;
+    width: 4%;
+    transform: translate(0px, 0px);
+    transition: bottom 2s ease-out;
+    -moz-transition: bottom 2s ease-out;
+    -webkit-transition: bottom 2s ease-out;
 }
 .item-4{
-	bottom: 70%;
+	position: absolute;
+	bottom: 30%;
+    left: 5%;
+    width: 5%;
+    transform: translate(0px, 0px);
+    transition: bottom 2s ease-out;
+    -moz-transition: bottom 2s ease-out;
+    -webkit-transition: bottom 2s ease-out;
+}
+.item-5{
+	position: absolute;
+	bottom: 75%;
+    left: 85%;
+    width: 4%;
+    transform: translate(0px, 0px);
+    transition: bottom 2s ease-out;
+    -moz-transition: bottom 2s ease-out;
+    -webkit-transition: bottom 2s ease-out;
+}
+.item-6{
+	position: absolute;
+	bottom: 52%;
+    left: 75%;
+    width: 3%;
+    transform: translate(0px, 0px);
+    transition: bottom 2s ease-out;
+    -moz-transition: bottom 2s ease-out;
+    -webkit-transition: bottom 2s ease-out;
+}
+.item-7{
+	position: absolute;
+	bottom: 30%;
     left: 90%;
     width: 5%;
+    transform: translate(0px, 0px);
+    transition: bottom 2s ease-out;
+    -moz-transition: bottom 2s ease-out;
+    -webkit-transition: bottom 2s ease-out;
 }
 
 .projects li:nth-child(1), .projects li:nth-child(2), .projects li:nth-child(3){
@@ -190,7 +272,7 @@ body{
 ul.projects{
 	overflow: hidden;
     padding: 0;
-    margin: 0;
+    margin-top: 2px;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     z-index: 10;
@@ -207,11 +289,10 @@ ul.projects{
 	color: #0a0a0a;
 	text-decoration: none;
 }
-.body{
+.about{
 	align-items: center;
 	flex-grow:1;
 	flex-shrink:0;
-	padding:3rem 1.5rem
 }
 .about-photo{
 	width: 100%;
