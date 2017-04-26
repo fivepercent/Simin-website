@@ -17,11 +17,11 @@ $(function() {
 			$(".item-5").css({bottom: '65%'});
 			$(".item-6").css({bottom: '42%'});
 			$(".item-7").css({bottom: '20%'});
-			$(".nav-header").addClass("nav-header-shrink");
+			$(".nav-header").addClass("nav-header-shrink").animate();
 
 		}else{
 			$(".title").css({bottom: '40%'});
-			$(".item-0").css({top: '22%'});
+			$(".item-0").css({top: '12%'});
 			$(".item-1").css({bottom: '75%'});
 			$(".item-2").css({bottom: '60%'});
 			$(".item-3").css({bottom: '50%'});

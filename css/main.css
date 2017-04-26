@@ -25,10 +25,10 @@ body{
 .nav-header-shrink a img{
 	width: 40px;
 }
-.nav-header-shrink div{
+/*.nav-header-shrink div{
 	left: 10px;
 	top: 10px;
-}
+}*/
 .logo {
 	z-index: 5;
 	position: absolute;
@@ -69,8 +69,8 @@ body{
 	position: absolute;
 	width: 35px;
 	height: 25px;
-	left: 30px;
-	top: 30px;
+	left: 20px;
+	top: 12px;
 }
 
 .hamburger-menu-handle {
@@ -148,10 +148,10 @@ body{
 }
 .item-0{
 	position: absolute;
-	top:22%;
+	top:12%;
 	left:50%;
-	margin-left:-7.5%;
-	width:15%;
+	margin-left:-5%;
+	width:10%;
     transition: top 2s ease-out;
     -moz-transition: top 2s ease-out;
     -webkit-transition: top 2s ease-out;
@@ -199,7 +199,7 @@ body{
 .item-5{
 	position: absolute;
 	bottom: 75%;
-    left: 85%;
+    right: 15%;
     width: 4%;
     transform: translate(0px, 0px);
     transition: bottom 2s ease-out;
@@ -209,7 +209,7 @@ body{
 .item-6{
 	position: absolute;
 	bottom: 52%;
-    left: 75%;
+    right: 25%;
     width: 3%;
     transform: translate(0px, 0px);
     transition: bottom 2s ease-out;
@@ -219,42 +219,44 @@ body{
 .item-7{
 	position: absolute;
 	bottom: 30%;
-    left: 90%;
+    right: 10%;
     width: 5%;
     transform: translate(0px, 0px);
     transition: bottom 2s ease-out;
     -moz-transition: bottom 2s ease-out;
     -webkit-transition: bottom 2s ease-out;
 }
-
-.projects li:nth-child(1), .projects li:nth-child(2), .projects li:nth-child(3){
-	width: calc(99.99% * 0.999/3 - (1px - 1px * 0.999/3));
+.projects li{
 	height: 50vh;
 	display: block;
 	float: left;
 	margin-right: 1px;
-}
-
-.projects li:nth-child(4){
-	width: 40%;
-	height: 50vh;
-	display: block;
-	float: left;
-
-}
-
-.projects li:nth-child(5){
-	width: calc(60% - 1px);
-	height: 50vh;
-	display: block;
-	float: left;
-	margin-left: 1px;	
-}
-
-.projects li {
 	margin-bottom: 1px;
     position: relative;
     overflow: hidden;
+}
+@media (min-width:801px) {
+	.projects li:nth-child(1), .projects li:nth-child(2), .projects li:nth-child(3){
+		width: calc(99.99% * 0.999/3 - (1px - 1px * 0.999/3));
+	}
+
+	.projects li:nth-child(4){
+		width: 40%;
+	}
+
+	.projects li:nth-child(5){
+		width: calc(60% - 2px);	
+	}
+}
+@media (min-width:401px) and (max-width: 800px){
+	.projects li {
+		width: calc(50% - 1px);
+	}
+}
+@media (max-width: 400px){
+	.projects li {
+		
+	}
 }
 
 .projects li picture{
@@ -265,17 +267,13 @@ body{
 }
 .projects li picture img{
 	display: block;
-    transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
     min-height: 100%;
     min-width: 100%;
 }
-ul.projects{
+.projects{
 	overflow: hidden;
     padding: 0;
     margin-top: 2px;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    z-index: 10;
 }
 .about-bottom{
 	bottom: 0;
