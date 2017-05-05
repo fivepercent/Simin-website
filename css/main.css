@@ -10,7 +10,7 @@ body{
 	height: 100vh;
 	width: 100%;
 	position: fixed;
-	z-index: 50;
+	z-index: 85;
 	opacity: 0;
 	background-color: rgba(0,0,0,0.4);
 	bottom: 0;
@@ -56,16 +56,16 @@ body{
 }
 .pull-down-menu {
   background-color: #F8F8F8;
-  padding: 50px;
+  padding: 0;
   margin: 0;
-  width: 100px;
+  width: 200px;
   height: 100%;
   position: absolute;
   top: 0px;
   left: -100%;
-  border-top: 10px solid transparent;
+  border-top: 100px solid transparent;
   z-index: 99;
-  
+  list-style: none;
   transition: left .4s ease-in-out;
 }
 .pull-down-menu.is-open {
@@ -73,12 +73,60 @@ body{
   left: 0;
   position: fixed;
 }
-.pull-down-menu a{
+.pull-down-menu li{
+  margin-left: 0px;
+  margin-bottom: 40px;
+}
+.pull-down-menu li:nth-child(1){
+  transition: margin-left 0.5s linear;
+}
+.pull-down-menu li:nth-child(2){
+  transition: margin-left 0.6s linear;
+}
+.pull-down-menu li:nth-child(3){
+  transition: margin-left 0.7s linear;
+}
+.pull-down-menu li:nth-child(4){
+  transition: margin-left 0.8s linear;
+}
+.pull-down-menu li:nth-child(1) a{
+  transition: color 1s ease-in;
+}
+.pull-down-menu li:nth-child(2) a{
+  transition: color 1.5s ease-in;
+}
+.pull-down-menu li:nth-child(3) a{
+  transition: color 2s ease-in;
+}
+.pull-down-menu li:nth-child(4) a{
+  transition: color 2.5s ease-in;
+}
+.pull-down-menu.is-open li{
+  margin-left: 50px;
+}
+.pull-down-menu.is-open li a{
+  color: black;
+}
+.pull-down-menu.is-open li a:after {
+    content: '';
+    position: absolute;
+    background: black;
+    height: 2px;
+    width: 0%;
+    transition: .35s ease;
+    left: 50%;
+    transform: translate(-50%, 2em);
+}
+
+.pull-down-menu.is-open li a:hover:after {
+    width: 50%;
+}
+.pull-down-menu li a{
   list-style-type: none;
   line-height: 2em;
   font-family: "open sans", sans-serif;
-  color: black;
-  text-decoration: none;	
+  color: yellow;
+  text-decoration: none;
 }
 
 .hamburger-menu {
@@ -93,9 +141,9 @@ body{
 .hamburger-menu-handle {
 	top: 10px;
     cursor: pointer;
-	border-radius: 1px;
-	height: 5px;
-	width: 35px;
+	border-radius: 150px;
+	height: 3px;
+	width: 25px;
 	background: black;
 	position: absolute;
 	display: block;
@@ -104,9 +152,9 @@ body{
 
 .hamburger-menu-handle:before, .hamburger-menu-handle:after {
 	cursor: pointer;
-	border-radius: 1px;
-	height: 5px;
-	width: 35px;
+	border-radius: 150px;
+	height: 3px;
+	width: 25px;
 	background: black;
 	position: absolute;
 	display: block;
@@ -147,15 +195,16 @@ body{
 }
 .scene{
 	height: 100%;
-	display:block;
-	margin-top: 0;
+	margin: 0;
+  overflow: hidden;
 }
 .scene picture img{
 	width: 100%;
 }
 .title{
 	position: absolute;
-	bottom: 40%;
+  z-index: 5;
+	bottom: 50%;
 	left:50%;
 	margin-left: -10%;
 	width: 20%;
@@ -205,7 +254,7 @@ body{
 }
 .item-4{
 	position: absolute;
-	bottom: 30%;
+	bottom: 35%;
     left: 5%;
     width: 5%;
     transform: translate(0px, 0px);
@@ -235,7 +284,7 @@ body{
 }
 .item-7{
 	position: absolute;
-	bottom: 30%;
+	bottom: 35%;
     right: 10%;
     width: 5%;
     transform: translate(0px, 0px);
@@ -254,7 +303,7 @@ body{
 }
 @media (min-width:801px) {
 	.projects li:nth-child(1), .projects li:nth-child(2), .projects li:nth-child(3){
-		width: calc(99.99% * 0.999/3 - (1px - 1px * 0.999/3));
+		width: calc(33.33% - 1px);
 	}
 
 	.projects li:nth-child(4){
@@ -264,23 +313,34 @@ body{
 	.projects li:nth-child(5){
 		width: calc(60% - 2px);	
 	}
+  .projects li:hover .project-background{
+    opacity: 0.5;
+  }
+  .projects li:hover .project-description{
+    opacity: 100;
+  }
 }
 @media (min-width:401px) and (max-width: 800px){
 	.projects li {
 		width: calc(50% - 1px);
 	}
+  .projects li .project-background{
+    opacity: 0.5;
+  }
+  .projects li .project-description{
+    opacity: 100;
+  }
 }
 @media (max-width: 400px){
 	.projects li {
 		width: 100%;
 	}
-}
-
-.projects li:hover .project-background{
-	opacity: 0.5;
-}
-.projects li:hover .project-description{
-	opacity: 100;
+  .projects li .project-background{
+    opacity: 0.5;
+  }
+  .projects li .project-description{
+    opacity: 100;
+  }
 }
 
 .projects li picture{
@@ -299,8 +359,8 @@ body{
 .projects{
 	z-index: 10;
 	overflow: hidden;
-    padding: 0;
-    margin-top: 5px;
+  padding: 0;
+  margin-top: 5px;
 }
 .project-background{
 	z-index: 30;
@@ -365,7 +425,7 @@ body{
   font-weight: 600;
   overflow: hidden;
   height: 40px;
-  width: 300px;
+  width: 375px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -458,3 +518,215 @@ body{
             transform: translate3d(0, -25%, 0);
   }
 }
+.projects-top{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 80vh;
+  background-color: pink;
+}
+.projects-top-image{
+  position: absolute;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-image: url(https://images.apple.com/v/home/df/images/heroes/iphone7_productred_large.png);
+  background-size: auto 100%;
+  height: 50%;
+  width: 100%;
+  min-height: 400px;
+  bottom: 0;
+  margin: 0;
+}
+.margin_top_100{
+  margin-top: 100px;
+}
+.row-small{
+  position: relative;
+  width: 100%;
+  height: 100px;
+  display: block;
+}
+.row-large{
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.row-medium{
+  position: relative;
+  width: 100%;
+  display: block;
+  height: 400px;
+}
+.rowheader{
+  width: 30%;
+  height: 100%;
+  text-align: right;
+  float: left;
+}
+.rowcontent{
+  width: 40%;
+  height: 100%;
+  margin-left: 5%;
+  float: left;
+}
+.row-column{
+  width: 27.33%;
+  margin-left: 3%;
+  margin-right: 3%;
+  float: left;
+}
+.padding_top_30{
+  padding-top: 30px;
+}
+.padding_bottom_30{
+  padding-bottom: 30px;
+}
+.padding_top_50{
+  padding-top: 50px;
+}
+.padding_bottom_50{
+  padding-bottom: 50px;
+}
+.background-gray{
+  background-color: gray;
+}
+.project-features{
+  width: 80%;
+  height: 400px;
+  background-color: pink;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+.project-feature{
+  padding-top: 50px;
+  width: 40%;
+  height: 150px;
+  margin-left: 5%;
+  margin-right: 5%;
+  float: left;
+}
+.chat-icon{
+  height: 50px;
+  width: 50px;
+  background-size: 50px 50px;
+  background-image: url(http://placehold.it/50x50);
+  margin: 0;
+  float: left;
+}
+.profile-image-1{
+  background-image: url(http://placehold.it/200x400);
+  float: left;
+  left:50px;
+}
+.profile-image-2{
+  background-image: url(http://placehold.it/120x230);
+  float: right;
+  right: 50px;
+}
+.profile-image-3{
+  background-image: url(http://placehold.it/120x230);
+  float: right;
+  right: 100px;
+}
+.profile-image-4{
+  background-image: url(http://placehold.it/120x230);
+  float: right;
+  right: 150px;
+}
+.interact-image-1{
+  background-image: url(http://placehold.it/200x400);
+  float: left;
+  left:50px;
+}
+.interact-image-2{
+  background-image: url(http://placehold.it/120x230);
+  float: right;
+  right: 50px;
+}
+.interact-image-3{
+  background-image: url(http://placehold.it/120x230);
+  float: right;
+  right: 100px;
+}
+.interact-image-4{
+  background-image: url(http://placehold.it/120x230);
+  float: right;
+  right: 150px;
+}
+.profile-title-and-goal, .interact-title-and-goal{
+  float: right;
+  right: 50px;
+}
+.project-large-image{
+  width: 200px;
+  height: 400px;
+  position: relative;
+  background-size: auto auto;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+.project-small-image{
+  width: 120px;
+  height: 230px;
+  position: relative;
+  background-size: auto auto;
+  background-repeat: no-repeat;
+  margin: 0;
+  top:170px;  
+}
+.project-block{
+  width: 900px;
+  height: 100%;
+  position: relative;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.project-title-and-goal{
+  width: 460px;
+  position: relative;
+  display: block;
+  bottom: 230px;
+}
+.project-title-and-goal h3, h4{
+  margin-bottom: 0;
+}
+.background-pink{
+  background-color: pink;
+}
+.background-green{
+  background-color: green;
+}
+.chat-image-1{
+  background-image: url(http://placehold.it/200x400);
+  float: right;
+  right:50px;
+}
+.chat-image-2{
+  background-image: url(http://placehold.it/120x230);
+  float: left;
+  left: 50px;
+}
+.chat-image-3{
+  background-image: url(http://placehold.it/120x230);
+  float: left;
+  left: 100px;
+}
+.chat-image-4{
+  background-image: url(http://placehold.it/120x230);
+  float: left;
+  left: 150px;
+}
+.chat-title-and-goal{
+  float: left;
+  left: 50px;
+}
+#design-guide{
+  text-align: center;
+}
+#design-guide img{
+  width: 80%;
+}
+
