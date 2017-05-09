@@ -156,7 +156,7 @@ body{
 
 .hamburger-menu-handle {
 	top: 10px;
-    cursor: pointer;
+  cursor: pointer;
 	border-radius: 150px;
 	height: 3px;
 	width: 25px;
@@ -640,6 +640,13 @@ body{
   margin-right: auto;
   margin-top: 50px;
 }
+.features-title{
+  text-align: center;
+  margin:0;
+  position: relative;
+  top: 30px;
+  color: white;
+}
 .project-feature{
   padding-top: 50px;
   width: 40%;
@@ -648,51 +655,67 @@ body{
   margin-right: 5%;
   float: left;
 }
-.chat-icon{
-  height: 50px;
-  width: 50px;
-  background-size: 50px 50px;
-  background-image: url(http://placehold.it/50x50);
+.project-feature h4{
+  position: relative;
+  left:10px;
+  bottom: 13px;
+}
+.feature-icon{
+  height: 30px;
+  width: 30px;
+  background-size: 30px 30px;
   margin: 0;
   float: left;
 }
+.feature-icon-1{
+  background-image: url(../image/anteros/feature-icon-1.png);
+}
+.feature-icon-2{
+  background-image: url(../image/anteros/feature-icon-2.png);
+}
+.feature-icon-3{
+  background-image: url(../image/anteros/feature-icon-3.png);
+}
+.feature-icon-4{
+  background-image: url(../image/anteros/feature-icon-4.png);
+}
 .profile-image-1{
-  background-image: url(http://placehold.it/200x400);
+  background-image: url(../image/anteros/profile-image-1.png);
   float: left;
   left:50px;
 }
 .profile-image-2{
-  background-image: url(http://placehold.it/120x230);
+  background-image: url(../image/anteros/profile-image-2.png);
   float: right;
   right: 50px;
 }
 .profile-image-3{
-  background-image: url(http://placehold.it/120x230);
+  background-image: url(../image/anteros/profile-image-3.png);
   float: right;
   right: 100px;
 }
 .profile-image-4{
-  background-image: url(http://placehold.it/120x230);
+  background-image: url(../image/anteros/profile-image-4.png);
   float: right;
   right: 150px;
 }
 .interact-image-1{
-  background-image: url(http://placehold.it/200x400);
+  background-image: url(../image/anteros/interact-image-1.png);
   float: left;
   left:50px;
 }
 .interact-image-2{
-  background-image: url(http://placehold.it/120x230);
+  background-image: url(../image/anteros/interact-image-2.png);
   float: right;
   right: 50px;
 }
 .interact-image-3{
-  background-image: url(http://placehold.it/120x230);
+  background-image: url(../image/anteros/interact-image-3.png);
   float: right;
   right: 100px;
 }
 .interact-image-4{
-  background-image: url(http://placehold.it/120x230);
+  background-image: url(../image/anteros/interact-image-4.png);
   float: right;
   right: 150px;
 }
@@ -704,7 +727,7 @@ body{
   width: 200px;
   height: 400px;
   position: relative;
-  background-size: auto auto;
+  background-size: 200px auto;
   background-repeat: no-repeat;
   margin: 0;
 }
@@ -712,7 +735,7 @@ body{
   width: 120px;
   height: 230px;
   position: relative;
-  background-size: auto auto;
+  background-size: 120px auto;
   background-repeat: no-repeat;
   margin: 0;
   top:170px;  
@@ -741,22 +764,22 @@ body{
   background-color: green;
 }
 .chat-image-1{
-  background-image: url(http://placehold.it/200x400);
+  background-image: url(../image/anteros/chat-image-1.png);
   float: right;
   right:50px;
 }
 .chat-image-2{
-  background-image: url(http://placehold.it/120x230);
+  background-image: url(../image/anteros/chat-image-2.png);
   float: left;
   left: 50px;
 }
 .chat-image-3{
-  background-image: url(http://placehold.it/120x230);
+  background-image: url(../image/anteros/chat-image-3.png);
   float: left;
   left: 100px;
 }
 .chat-image-4{
-  background-image: url(http://placehold.it/120x230);
+  background-image: url(../image/anteros/chat-image-4.png);
   float: left;
   left: 150px;
 }
@@ -777,20 +800,20 @@ body{
 .research-image-1{
   width: 450px;
   height: 200px;
-  background-image: url(http://placehold.it/450x200);
+  background-image: url(../image/anteros/research-image-1.png);
   float: left;
   position: relative;
-  background-size: auto auto;
+  background-size: 450px auto;
   background-repeat: no-repeat;
   margin: 0;
 }
 .research-image-2{
   width: 450px;
   height: 200px;
-  background-image: url(http://placehold.it/450x200);
+  background-image: url(../image/anteros/research-image-2.png);
   float: right;
   position: relative;
-  background-size: auto auto;
+  background-size: 450px auto;
   background-repeat: no-repeat;
   margin: 0;
 }
@@ -798,8 +821,15 @@ body{
   display: block;
   position: relative;
 }
+.flowchart{
+  width: 900px;
+}
 .background-drawing{
-  background-image: url(http://placehold.it/1000x400);
+  background-image: url(../image/anteros/phototype.jpg);
+  background-size: 100% auto;
+}
+.phototype{
+  width: 100%;
 }
 .user-testing-feedback{
   position: relative;
