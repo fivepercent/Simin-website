@@ -1,3 +1,85 @@
+@media (min-width:901px) {
+  .projects li:nth-child(1), .projects li:nth-child(2), .projects li:nth-child(3){
+    width: calc(33.33% - 1px);
+  }
+
+  .projects li:nth-child(4){
+    width: 40%;
+  }
+
+  .projects li:nth-child(5){
+    width: calc(60% - 2px); 
+  }
+  .projects li:hover .project-background{
+    opacity: 0.5;
+  }
+  .projects li:hover .project-description{
+    opacity: 100;
+  }
+  .section-block{
+    width: 900px;
+  }
+  .rowheader{
+    width: 10%;
+    text-align: right;
+    position: relative;
+    float: left;
+    display: block;
+  }
+  .rowcontent{
+    width: 85%;
+    margin-left: 5%;
+    position: relative;
+    float: right;
+    display: block;
+  }
+}
+@media (min-width:401px) and (max-width: 900px){
+  .projects li {
+    width: calc(50% - 1px);
+  }
+  .projects li .project-background{
+    opacity: 0.5;
+  }
+  .projects li .project-description{
+    opacity: 100;
+  }
+  .section-block{
+    width: 400px;
+  }
+  .rowheader{
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  .rowcontent{
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+  }
+}
+@media (max-width: 400px){
+  .projects li {
+    width: 100%;
+  }
+  .projects li .project-background{
+    opacity: 0.5;
+  }
+  .projects li .project-description{
+    opacity: 100;
+  }
+  .section-block{
+    width: 100%;
+  }
+}
+.section-block{
+  height: 100%;
+  position: relative;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 body{
 	background-color: #F8F8F8;
 	margin: 0;
@@ -222,7 +304,7 @@ body{
 .title{
 	position: absolute;
   z-index: 5;
-	bottom: 30%;
+	bottom: 15%;
 	left:50%;
 	margin-left: -5%;
 	width: 10%;
@@ -232,7 +314,7 @@ body{
 }
 .item-0{
 	position: absolute;
-	top:12%;
+	top:8%;
 	left:50%;
 	margin-left:-5%;
 	width:10%;
@@ -262,7 +344,7 @@ body{
 }
 .item-3{
 	position: absolute;
-	bottom: 40%;
+	bottom: 35%;
     left: 12%;
     width: 7%;
     transform: translate(0px, 0px);
@@ -272,7 +354,7 @@ body{
 }
 .item-4{
 	position: absolute;
-	bottom: 25%;
+	bottom: 15%;
     left: 5%;
     width: 10%;
     transform: translate(0px, 0px);
@@ -292,7 +374,7 @@ body{
 }
 .item-6{
 	position: absolute;
-	bottom: 52%;
+	bottom: 42%;
     right: 25%;
     width: 6%;
     transform: translate(0px, 0px);
@@ -302,7 +384,7 @@ body{
 }
 .item-7{
 	position: absolute;
-	bottom: 35%;
+	bottom: 20%;
     right: 10%;
     width: 10%;
     transform: translate(0px, 0px);
@@ -311,54 +393,13 @@ body{
     -webkit-transition: bottom 2s ease-out;
 }
 .projects li{
-	height: 50vh;
+	height: 400px;
 	display: block;
 	float: left;
 	margin-right: 1px;
 	margin-bottom: 1px;
     position: relative;
     overflow: hidden;
-}
-@media (min-width:801px) {
-	.projects li:nth-child(1), .projects li:nth-child(2), .projects li:nth-child(3){
-		width: calc(33.33% - 1px);
-	}
-
-	.projects li:nth-child(4){
-		width: 40%;
-	}
-
-	.projects li:nth-child(5){
-		width: calc(60% - 2px);	
-	}
-  .projects li:hover .project-background{
-    opacity: 0.5;
-  }
-  .projects li:hover .project-description{
-    opacity: 100;
-  }
-}
-@media (min-width:401px) and (max-width: 800px){
-	.projects li {
-		width: calc(50% - 1px);
-	}
-  .projects li .project-background{
-    opacity: 0.5;
-  }
-  .projects li .project-description{
-    opacity: 100;
-  }
-}
-@media (max-width: 400px){
-	.projects li {
-		width: 100%;
-	}
-  .projects li .project-background{
-    opacity: 0.5;
-  }
-  .projects li .project-description{
-    opacity: 100;
-  }
 }
 
 .projects li picture{
@@ -412,13 +453,14 @@ body{
 .project-description h2 span {
   display: block;
   position: relative;
-  font-family: "Futura";
-  border-bottom: 2px solid black;
+  font-family: "gill sans";
+  border-bottom: 1px solid black;
 }
 .project-description h2 em {
   display: block;
   position: relative;
   font-family: "Avenir";
+  /*font-style: roman;*/
 }
 .about-bottom{
 	bottom: 0;
@@ -563,13 +605,21 @@ body{
   position: absolute;
   background-position: bottom center;
   background-repeat: no-repeat;
-  background-image: url(../image/anteros/anteros_app_mockup.png);
   background-size: auto 100%;
   height: 50%;
   width: 100%;
   min-height: 500px;
   bottom: 0;
   margin: 0;
+}
+.anteros-top-image{
+  background-image: url(../image/anteros/anteros_app_mockup.png);
+}
+.pomoer-top-image{
+  background-image: url(../image/pomoer/pomoer_mockup.png);
+}
+.inbloom-top-image{
+  background-image: url(../image/inbloom/prototype.png);
 }
 .margin_top_100{
   margin-top: 100px;
@@ -592,19 +642,10 @@ body{
   position: relative;
   width: 100%;
   display: block;
-  height: 400px;
+  height: 500px;
 }
-.rowheader{
-  width: 10%;
-  text-align: right;
-  float: left;
-  position: relative;
-}
-.rowcontent{
-  width: 85%;
-  margin-left: 5%;
-  float: left;
-  position: relative;
+.project-info-title-font{
+  font-family: "Futura";
 }
 .row-column1, .row-column3{
   width: 30%;
@@ -629,16 +670,18 @@ body{
   padding-bottom: 50px;
 }
 .background-gray{
-  background-color: gray;
+  background-color:#ededed;
 }
 .project-features{
   width: 900px;
   height: 400px;
-  background-color: pink;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
+}
+.anteros-features-color{
+  background-color: #f9c0c8;
 }
 .features-title{
   text-align: center;
@@ -682,106 +725,108 @@ body{
 .profile-image-1{
   background-image: url(../image/anteros/profile-image-1.png);
   float: left;
-  left:50px;
+  left:20px;
 }
 .profile-image-2{
   background-image: url(../image/anteros/profile-image-2.png);
   float: right;
-  right: 50px;
+  right: 30px;
 }
 .profile-image-3{
   background-image: url(../image/anteros/profile-image-3.png);
   float: right;
-  right: 100px;
+  right: 60px;
 }
 .profile-image-4{
   background-image: url(../image/anteros/profile-image-4.png);
   float: right;
-  right: 150px;
+  right: 90px;
 }
 .interact-image-1{
   background-image: url(../image/anteros/interact-image-1.png);
   float: left;
-  left:50px;
+  left:20px;
 }
 .interact-image-2{
   background-image: url(../image/anteros/interact-image-2.png);
   float: right;
-  right: 50px;
+  right: 30px;
 }
 .interact-image-3{
   background-image: url(../image/anteros/interact-image-3.png);
   float: right;
-  right: 100px;
+  right: 60px;
 }
 .interact-image-4{
   background-image: url(../image/anteros/interact-image-4.png);
   float: right;
-  right: 150px;
+  right: 90px;
 }
 .profile-title-and-goal, .interact-title-and-goal{
   float: right;
-  right: 50px;
+  right: 30px;
 }
 .project-large-image{
-  width: 200px;
-  height: 400px;
+  width: 250px;
+  height: 500px;
   position: relative;
-  background-size: 200px auto;
+  background-size: 250px auto;
   background-repeat: no-repeat;
   margin: 0;
 }
 .project-small-image{
-  width: 120px;
-  height: 230px;
+  width: 150px;
+  height: 280px;
   position: relative;
-  background-size: 120px auto;
+  background-size: 150px auto;
   background-repeat: no-repeat;
   margin: 0;
-  top:170px;  
-}
-.section-block{
-  width: 900px;
-  height: 100%;
-  position: relative;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+  top:210px;  
 }
 .project-title-and-goal{
-  width: 460px;
+  width: 510px;
   position: relative;
   display: block;
-  bottom: 230px;
+  bottom: 250px;
 }
 .project-title-and-goal h3, h4{
   margin-bottom: 0;
 }
 .background-pink{
-  background-color: pink;
+  /*background-color: white;*/
+  background-image: linear-gradient(to top, #ee9ca7 0%, #ffdde1 100%);
 }
-.background-green{
-  background-color: green;
+.background-dackblue{
+
+ /* background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(33deg, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
+ background-blend-mode: normal,color-burn;*/
+
+ background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+ /*background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+ background-blend-mode: screen;*/
+}
+.background-lightwarm{
+  background-image: linear-gradient(to top, #c5b5ab 0%, #e2d1c3 100%);
 }
 .chat-image-1{
   background-image: url(../image/anteros/chat-image-1.png);
   float: right;
-  right:50px;
+  right:20px;
 }
 .chat-image-2{
   background-image: url(../image/anteros/chat-image-2.png);
   float: left;
-  left: 50px;
+  left: 30px;
 }
 .chat-image-3{
   background-image: url(../image/anteros/chat-image-3.png);
   float: left;
-  left: 100px;
+  left: 60px;
 }
 .chat-image-4{
   background-image: url(../image/anteros/chat-image-4.png);
   float: left;
-  left: 150px;
+  left: 90px;
 }
 .chat-title-and-goal{
   float: left;
