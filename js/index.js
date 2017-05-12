@@ -5,6 +5,13 @@ $("#hamburger-menu").on("click", function(){
 	$("#overlay").toggleClass("is-open");
 });
 
+$("#portfolio").on("click", function(){
+	$('html, body').animate({ scrollTop: $('#projects').offset().top }, 600);
+	$("#hamburger-menu-handle").removeClass("active");
+	$("#pull-down-menu").removeClass("is-open");
+	$("#overlay").removeClass("is-open");
+})
+
 $(function() {
 	$(window).scroll(function() {
 		var move = $(window).scrollTop();
